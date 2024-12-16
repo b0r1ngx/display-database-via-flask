@@ -1,0 +1,22 @@
+{% extends "table.html" %}
+{% block content %}
+<table>
+    <thead>
+    <tr>
+        {% for field in fields %}
+        <th>{{ field }}</th>
+        {% endfor %}
+    </tr>
+    </thead>
+    <tbody>
+    {% for user in users %}
+    <tr>
+        <td>{{ user.chat_id }}</td>
+        <td>{{ user.username }}</td>
+        <td>{{ user.referred_by }}</td>
+        <td>{{ user.created_at }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

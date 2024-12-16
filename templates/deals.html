@@ -1,0 +1,33 @@
+{% extends "table.html" %}
+{% block content %}
+<table>
+    <thead>
+    <tr>
+        {% for field in fields %}
+        <th>{{ field }}</th>
+        {% endfor %}
+    </tr>
+    </thead>
+    <tbody>
+    {% for deal in deals %}
+    <tr>
+        <td>{{ deal.deal_id }}</td>
+        <td>{{ deal.chat_id }}</td>
+        <td>{{ deal.type }}</td>
+        <td>{{ deal.currency }}</td>
+        <td>{{ deal.value }}</td>
+        <td>{{ deal.wallet }}</td>
+        <td>{{ deal.payed_by }}</td>
+        <td>{{ deal.to_pay }}</td>
+        <td>{{ deal.referred_by }}</td>
+        <td>{{ deal.bonuses_used }}</td>
+        <td>{{ deal.transaction_link }}</td>
+        <td>{{ deal.user_requisites }}</td>
+        <td>{{ deal.transaction_hash }}</td>
+        <td>{{ deal.document_id }}</td>
+        <td>{{ deal.created_at }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
